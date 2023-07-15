@@ -5,14 +5,14 @@ import 'package:quiz_app/widgets/gradient_container.dart';
 
 const log = print;
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class StartQuiz extends StatefulWidget {
+  const StartQuiz({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<StartQuiz> createState() => _StartQuizState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _StartQuizState extends State<StartQuiz> {
   void startQuiz() {
     log('Quiz started');
   }
@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Image.asset(
               'assets/images/quiz_logo.png',
               width: 300,
+              color: const Color.fromARGB(150, 255, 255, 255),
             ),
             const SizedBox(
               height: 80,
