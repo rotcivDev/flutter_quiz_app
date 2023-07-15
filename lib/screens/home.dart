@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/widgets/white_text.dart';
+import 'package:quiz_app/widgets/start_button.dart';
 import 'package:quiz_app/widgets/gradient_container.dart';
 
 const log = print;
@@ -41,15 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 30,
             ),
-            OutlinedButton(
-              onPressed: startQuiz,
-              style: OutlinedButton.styleFrom(
-                foregroundColor: Colors.white,
-              ),
-              child: const Text(
-                'Start Quiz',
-              ),
-            )
+            const StartButton('Start Quiz')
           ],
         ),
       ),
