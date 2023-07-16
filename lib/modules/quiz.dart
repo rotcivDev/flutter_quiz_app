@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/screens/questions.dart';
-import 'package:quiz_app/screens/start_quiz.dart';
-import 'package:quiz_app/widgets/gradient_container.dart';
+import 'package:quiz_app/modules/screens/questions.dart';
+import 'package:quiz_app/modules/screens/start_quiz.dart';
+import 'package:quiz_app/modules/widgets/gradient_container.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -12,21 +12,27 @@ class Quiz extends StatefulWidget {
   }
 }
 
-class _QuizState extends State<Quiz> {
-  late Widget currentPage;
+const String startQuiz = 'start-quiz';
+const String questions = 'questions';
 
-  @override
-  void initState() {
-    currentPage = StartQuiz(
-      handleStart: goToQuestions,
-    );
-    super.initState();
-  }
+class _QuizState extends State<Quiz> {
+  String currentPage = startQuiz;
 
   void goToQuestions() {
     setState(() {
-      currentPage = const Questions();
+      currentPage = questions;
     });
+  }
+
+  Widget selectScreenWidget(String slug) {
+    switch (slug) {
+      case questions:
+        return const Questions();
+      default:
+        return StartQuiz(
+          handleStart: goToQuestions,
+        );
+    }
   }
 
   @override
@@ -36,7 +42,7 @@ class _QuizState extends State<Quiz> {
         Color.fromARGB(255, 95, 6, 110),
         Colors.deepPurple,
       ],
-      column: currentPage,
+      column: selectScreenWidget(currentPage),
     );
   }
 }
