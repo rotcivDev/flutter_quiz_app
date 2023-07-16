@@ -12,7 +12,7 @@ class StartButton extends StatelessWidget {
       icon: const Icon(Icons.arrow_right_alt),
       label: Text(label),
       style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.white,
+        foregroundColor: Colors.black87,
       ),
     );
   }

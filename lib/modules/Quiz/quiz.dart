@@ -39,8 +39,8 @@ class _QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return GradientContainer(
       colors: const [
-        Color.fromARGB(255, 95, 6, 110),
-        Colors.deepPurple,
+        Color.fromRGBO(233, 233, 233, 1),
+        Color.fromRGBO(199, 199, 199, 1),
       ],
       column: selectScreenWidget(currentPage),
     );

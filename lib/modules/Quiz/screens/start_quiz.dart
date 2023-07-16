@@ -17,14 +17,14 @@ class StartQuiz extends StatelessWidget {
           Image.asset(
             'assets/images/quiz_logo.png',
             width: 300,
-            color: const Color.fromARGB(150, 255, 255, 255),
+            color: const Color.fromARGB(181, 17, 156, 206),
           ),
           const SizedBox(
             height: 80,
           ),
-          const WhiteText(
+          const Text(
             'Learn Flutter the fun way!',
-            fontSize: 30,
+            style: TextStyle(fontSize: 30, color: Colors.black87),
           ),
           const SizedBox(
             height: 30,
