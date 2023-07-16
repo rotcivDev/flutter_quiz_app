@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/modules/quiz.dart';
+import 'package:quiz_app/modules/Quiz/quiz.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

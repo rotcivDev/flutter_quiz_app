@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/widgets/white_text.dart';
-import 'package:quiz_app/widgets/start_button.dart';
+import 'package:quiz_app/modules/Quiz/widgets/white_text.dart';
+import 'package:quiz_app/modules/Quiz/widgets/start_button.dart';
 
 const log = print;
 
