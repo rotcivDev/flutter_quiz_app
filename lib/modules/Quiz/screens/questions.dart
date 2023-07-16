@@ -32,7 +32,7 @@ class _QuestionsState extends State<Questions> {
             const SizedBox(
               height: 30,
             ),
-            ...questions[0].answers.map((answer) {
+            ...questions[0].getShuffledAnswers().map((answer) {
               return AnswerButton(
                   answer: answer,
                   handleClick: () {
