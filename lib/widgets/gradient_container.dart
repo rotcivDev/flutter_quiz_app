@@ -15,7 +15,7 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: colors),
       ),
-      child: Expanded(flex: 1, child: column),
+      child: column,
     );
   }
 }
